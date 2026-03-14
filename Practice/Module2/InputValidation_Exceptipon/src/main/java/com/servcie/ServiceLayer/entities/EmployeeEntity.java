@@ -1,13 +1,13 @@
-package com.example.PersentationLayerlayer.PresentationLayer.entities;
+package com.servcie.ServiceLayer.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 import lombok.*;
 
 import java.time.LocalDate;
-
-
-
 
 @Entity
 @Getter
@@ -27,7 +27,12 @@ public class EmployeeEntity {
 
     private LocalDate dateOfJoining;
 
+    private String role;
+
+
+
+    private Double salary;
+
     @JsonProperty("isActive")
     private Boolean isActive;
-
 }
